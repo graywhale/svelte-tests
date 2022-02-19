@@ -14,8 +14,10 @@ specifiers:
   '@testing-library/jest-dom': ^5.16.2
   '@testing-library/svelte': ^3.0.3
   '@types/jest': ^27.4.0
+  identity-obj-proxy: ^3.0.0
   jest: ^27.5.1
   jest-transform-css: ^3.0.0
+  regenerator-runtime: ^0.13.9
   svelte: ^3.46.4
   svelte-check: ^2.2.6
   svelte-jester: ^2.3.2
@@ -40,8 +42,10 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.2
   '@testing-library/svelte': 3.0.3_svelte@3.46.4
   '@types/jest': 27.4.0
+  identity-obj-proxy: 3.0.0
   jest: 27.5.1_ts-node@10.5.0
   jest-transform-css: 3.0.0
+  regenerator-runtime: 0.13.9
   svelte: 3.46.4
   svelte-check: 2.4.5_svelte@3.46.4
   svelte-jester: 2.3.2_jest@27.5.1+svelte@3.46.4
@@ -7887,6 +7891,10 @@ packages:
       uglify-js: 3.15.1
     dev: true
 
+  /harmony-reflect/1.6.2:
+    resolution: {integrity: sha512-HIp/n38R9kQjDEziXyDTuW3vvoxxyxjxFzXLrBr18uB47GnSt+G9D29fqrpM5ZkspMcPICud3XsBJQ4Y2URg8g==}
+    dev: true
+
   /has-ansi/2.0.0:
     resolution: {integrity: sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=}
     engines: {node: '>=0.10.0'}
@@ -8222,6 +8230,13 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       postcss: 7.0.39
+    dev: true
+
+  /identity-obj-proxy/3.0.0:
+    resolution: {integrity: sha1-lNK9qWCERT7zb7xarsN+D3nx/BQ=}
+    engines: {node: '>=4'}
+    dependencies:
+      harmony-reflect: 1.6.2
     dev: true
 
   /ieee754/1.2.1:
