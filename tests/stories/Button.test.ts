@@ -10,9 +10,14 @@ test("Check Button Label", () => {
 })
 
 test('Check Button Click Event', async () => {
-    const {getByText} = render(Button, {label})
+    const {getByText} = render(Button, {label, backgroundColor: 0xffffff})
     const button = getByText('Button')
 
+    let fireToMe = false
+    button.addEventListener("click", () => {
+        fireToMe = true
+    })
+
     await fireEvent.click(button)
-    // expect(button).toHaveTextContent('Button Clicked')
+    expect(fireToMe).toEqual(true)
 })
